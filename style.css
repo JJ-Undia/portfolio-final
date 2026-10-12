@@ -1,0 +1,61 @@
+:root{--paper:#f7f8f5;--green:#0f3d2e;--gold:#e9b949;--ink:#17201b;--muted:#5b6b62;--line:#d9dfd9;--bad:#b3261e}
+@media (prefers-color-scheme:dark){:root{--paper:#101814;--green:#8fd1b0;--ink:#eef2ee;--muted:#a3b2a9;--line:#2b3a32}}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Source Sans 3",system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6}
+h1,h2,.brand{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.15}
+h1{font-size:clamp(2rem,5vw,3.4rem);font-weight:800;color:var(--green)}
+h2{font-size:1.4rem;color:var(--green)}
+a{color:var(--green)}
+.skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:var(--gold);padding:6px}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.site-header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:14px 5%;background:#0f3d2e;position:sticky;top:0;z-index:5}
+.brand{color:#fff;text-decoration:none;font-weight:800;font-size:1.3rem}
+.site-header ul{display:flex;gap:6px;list-style:none;margin:0;padding:0}
+.site-header nav a{color:#fff;text-decoration:none;padding:8px 14px;border-radius:6px;transition:background .2s}
+.site-header nav a:hover{background:rgba(255,255,255,.15)}
+.site-header nav a[aria-current=page]{background:var(--gold);color:#17201b;font-weight:600}
+.menu-btn{display:none;background:var(--gold);border:0;padding:8px 14px;border-radius:6px;font:inherit;cursor:pointer}
+main{max-width:1000px;margin:0 auto;padding:32px 5% 60px}
+.hero{display:flex;gap:40px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:20px 0 40px}
+.hero-text{flex:1 1 360px}
+.lead{font-size:1.2rem;max-width:52ch}
+.photo{margin:0;text-align:center}
+.photo img{width:min(300px,70vw);height:auto;aspect-ratio:1/1;object-fit:cover;object-position:top;border-radius:50%;border:6px solid var(--gold);animation:pop .8s ease both}
+.photo figcaption{font-size:.8rem;color:var(--muted)}
+@keyframes pop{from{transform:scale(.85);opacity:0}to{transform:none;opacity:1}}
+.btn{display:inline-block;background:var(--green);color:var(--paper);border:2px solid var(--green);padding:10px 20px;border-radius:6px;font-family:inherit;font-size:1rem;font-weight:600;text-decoration:none;cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--green)}
+.panel{border-top:3px solid var(--gold);padding:18px 0 10px;margin-top:24px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+table{width:100%;border-collapse:collapse}
+caption{text-align:left;color:var(--muted);padding-bottom:6px}
+th,td{text-align:left;padding:10px;border-bottom:1px solid var(--line)}
+th{background:var(--green);color:var(--paper)}
+video{max-width:100%;height:auto}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.card{border:1px solid var(--line);border-radius:8px;overflow:hidden;padding-bottom:16px;transition:transform .2s}
+.card:hover{transform:translateY(-4px)}
+.card img{width:100%;height:auto;display:block}
+.card h2,.card p,.card a{margin-left:16px;margin-right:16px}
+label{display:block;font-weight:600;margin-top:14px}
+input,textarea{width:100%;padding:10px;font:inherit;border:2px solid var(--line);border-radius:6px;background:transparent;color:inherit}
+.row{display:flex;gap:10px}.row input{flex:1}
+.err,.msg{color:var(--bad);margin:4px 0 0;min-height:1.2em;font-size:.95rem}
+.ok{color:var(--green);font-weight:600}
+.bad-field{border-color:var(--bad)}
+.tasks{list-style:none;padding:0}
+.tasks li{display:flex;align-items:center;gap:12px;padding:12px;border-bottom:1px solid var(--line);animation:pop .3s ease both}
+.tasks li span{flex:1}
+.tasks li input{width:auto}
+.tasks li.done span{text-decoration:line-through;color:var(--muted)}
+.tasks button{background:none;border:1px solid var(--bad);color:var(--bad);border-radius:6px;padding:4px 10px;cursor:pointer;font:inherit}
+.site-footer{text-align:center;padding:24px;color:var(--muted);border-top:1px solid var(--line)}
+@media (max-width:700px){
+  .menu-btn{display:block}
+  #nav{display:none;width:100%}#nav.open{display:block}
+  .site-header ul{flex-direction:column;padding-top:10px}
+  .grid2{grid-template-columns:1fr}
+  .row{flex-direction:column}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}

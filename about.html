@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About | Justine Undiandeye</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <a class="brand" href="index.html">Justine U.</a>
+  <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav id="nav" aria-label="Main">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" aria-current="page">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="planner.html">Planner</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="main">
+<h1>About me</h1>
+<section class="panel">
+  <h2>Educational background</h2>
+  <table>
+    <caption>My academic path, from newest to oldest</caption>
+    <thead><tr><th scope="col">Institution</th><th scope="col">Programme</th><th scope="col">Status</th></tr></thead>
+    <tbody>
+      <tr><td>Miva Open University</td><td>BSc Cybersecurity</td><td>In progress</td></tr>
+      <tr><td>University of Calabar</td><td>Master's in Computing (Cybersecurity and Digital Forensics)</td><td>Completed, 2026</td></tr>
+      <tr><td>University of Calabar</td><td>Postgraduate Diploma (PGD) in Computing</td><td>Completed, 2023</td></tr>
+      <tr><td>Modibbo Adama University of Technology, Yola, Adamawa State</td><td>Bachelor's degree</td><td>Graduated, 2019</td></tr>
+    </tbody>
+  </table>
+</section>
+<section class="panel">
+  <h2>Career aspirations</h2>
+  <p>I want to become a cybersecurity expert and build my own cybersecurity consulting company that helps organisations defend their systems and data.</p>
+</section>
+<section class="panel grid2">
+  <div>
+    <h2>Technical skills</h2>
+    <ul>
+      <li>Network defense</li>
+      <li>Cloud security</li>
+      <li>Endpoint security</li>
+      <li>SIEM tools</li>
+      <li>Cyber threat intelligence</li>
+    </ul>
+  </div>
+  <div>
+    <h2>Hobbies and interests</h2>
+    <ol>
+      <li>Writing</li>
+      <li>Listening to music</li>
+    </ol>
+  </div>
+</section>
+<section class="panel">
+  <h2>Introduction clip</h2>
+  <p>Press play to hear a short audio introduction from me.</p>
+  <video controls width="480" poster="profile.jpg"><source src="intro.mp4" type="video/mp4">Your browser does not support video.</video>
+  <p><audio controls><source src="intro.mp3" type="audio/mpeg">Your browser does not support audio.</audio></p>
+</section>
+</main>
+<footer class="site-footer"><p>&copy; 2026 Justine Utsu Undiandeye. Built for COS 106, Miva Open University.</p></footer>
+<script src="main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Planner | Justine Undiandeye</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <a class="brand" href="index.html">Justine U.</a>
+  <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav id="nav" aria-label="Main">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="planner.html" aria-current="page">Planner</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="main">
+<h1>Academic planner</h1>
+<section class="panel">
+  <form id="taskForm">
+    <label for="taskInput">New task</label>
+    <div class="row">
+      <input id="taskInput" type="text" placeholder="e.g. Finish COS 106 project" autocomplete="off">
+      <button class="btn" type="submit">Add task</button>
+    </div>
+    <p id="taskMsg" class="msg" role="alert"></p>
+  </form>
+  <p id="count" aria-live="polite"></p>
+  <ul id="taskList" class="tasks"></ul>
+</section>
+</main>
+<footer class="site-footer"><p>&copy; 2026 Justine Utsu Undiandeye. Built for COS 106, Miva Open University.</p></footer>
+<script src="main.js"></script>
+<script src="planner.js"></script>
+</body>
+</html>
